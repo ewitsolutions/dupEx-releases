@@ -1,0 +1,131 @@
+name: Bug report
+description: Something in dupEx does not work the way it should
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The fields below are the ones that decide whether a report can be reproduced straight away.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - Display, layout or theme
+        - Scan fails or reports an error
+        - Wrong results — duplicates missed, or files reported that are not duplicates
+        - Selection picked the wrong files
+        - Deleting or moving to the trash
+        - Performance — too slow, freezes, runs out of memory
+        - Licence key or activation
+        - File-manager entry or desktop integration
+        - Translation or wording
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: And what did you expect instead?
+      placeholder: |
+        I scanned two folders on an external drive. dupEx reported no duplicates, although the same photos are in both.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce it
+      placeholder: |
+        1. Add /home/me/photos and /mnt/backup/photos
+        2. Start the scan
+        3. …
+    validations:
+      required: true
+
+  - type: dropdown
+    id: reproducible
+    attributes:
+      label: Does it happen again?
+      options:
+        - Every time
+        - Sometimes
+        - Happened once so far
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: dupEx version
+      description: Menu → Info shows it, for example "deb 1.0.0".
+    validations:
+      required: true
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package format
+      options:
+        - deb
+        - rpm
+        - tar.gz (install script)
+        - AppImage
+        - Flatpak
+        - Snap (from the Snap Store)
+        - Snap (downloaded file)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Demo or licensed?
+      options:
+        - Demo
+        - Licensed
+    validations:
+      required: true
+
+  - type: input
+    id: system
+    attributes:
+      label: Distribution and desktop
+      placeholder: Linux Mint 22, Cinnamon
+    validations:
+      required: true
+
+  - type: input
+    id: scale
+    attributes:
+      label: How large was the scan?
+      description: Roughly how many files and how much data — only needed for performance problems.
+      placeholder: about 400,000 files, 60 GB, on an external USB disk
+
+  - type: textarea
+    id: log
+    attributes:
+      label: Log excerpt
+      description: >
+        The directory depends on the package format, because the Flatpak and the Snap remap HOME:
+        ~/.local/share/dupEx/logs for deb, rpm, tar.gz and AppImage,
+        ~/.var/app/com.ewitsolutions.dupEx/data/dupEx/logs for the Flatpak,
+        ~/snap/dupex/current/.local/share/dupEx/logs for the Snap. The log names its own location in
+        the debug section at the top, and that section also carries the storage medium, the GTK
+        version and the CPU features — so those need not be filled in above. It contains file paths,
+        so remove anything you would rather not publish.
+      render: text
+
+  - type: checkboxes
+    id: snap-interfaces
+    attributes:
+      label: For the Snap package only
+      description: >
+        The Snap runs strictly confined and does not get these automatically. Without them external
+        drives stay invisible and every folder reports an unknown storage type.
+      options:
+        - label: I connected removable-media, mount-observe and hardware-observe
+        - label: Not using the Snap package

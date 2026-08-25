@@ -1,0 +1,13 @@
+# Blank issues are off so every report arrives through a form: the four fields
+# the bug form asks for are exactly the ones that otherwise cost a round trip.
+blank_issues_enabled: false
+contact_links:
+  - name: Product page, pricing and FAQ
+    url: https://ewitsolutions.com/apps/dupex-duplicate-exterminator
+    about: What dupEx does, what it costs, and the answers to the common questions.
+  - name: Licensing and purchase questions
+    url: mailto:license@ewitsolutions.com
+    about: Anything about licence keys, invoices or refunds — not a bug report.
+  - name: Security problem
+    url: mailto:support@ewitsolutions.com
+    about: Please report vulnerabilities privately instead of opening an issue.

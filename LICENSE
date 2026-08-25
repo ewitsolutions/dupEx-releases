@@ -1,0 +1,19 @@
+dupEx (Duplicate Exterminator)
+Copyright (c) 2023-2026 EAST-WEST IT Solutions, Andreas Mehner.
+All rights reserved.
+
+This repository distributes the official binary packages of dupEx. dupEx is proprietary software:
+its source code is not published here and is not covered by an open-source licence.
+
+The binding terms for downloading and using these packages are the dupEx Terms and Conditions:
+
+    https://ewitsolutions.com/apps/terms-and-conditions
+
+Two facts stated on the product page, for orientation only — the Terms above are what applies:
+
+  * Scanning, finding and inspecting duplicates is free of charge. Deleting files is reserved for
+    the paid editions and needs a licence key.
+  * Every artifact on the release pages is signed. The public key is published alongside them as
+    dupex-release-key.asc, and SHA256SUMS lists the digests.
+
+Licensing questions: license@ewitsolutions.com

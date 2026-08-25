@@ -1,0 +1,31 @@
+name: Feature request
+description: Something dupEx should be able to do
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: wish
+    attributes:
+      label: What should dupEx be able to do?
+      placeholder: |
+        I want to move duplicates somewhere instead of deleting them.
+        I want another context-menu entry for duplicates: …
+        I want to select duplicates by the folder they came from.
+    validations:
+      required: true
+
+  - type: textarea
+    id: situation
+    attributes:
+      label: What situation led you to it?
+      description: >
+        Optional, but often the most useful part. A described situation can sometimes be answered
+        with something better than the feature that was asked for — or with a way that already
+        exists today.
+      placeholder: |
+        I found duplicates but cannot decide whether to delete them or simply leave them where they are.
+
+  - type: input
+    id: version
+    attributes:
+      label: dupEx version
+      description: Menu → Info shows it, for example "deb 1.0.0". So it is clear whether the gap still exists in the current release.
