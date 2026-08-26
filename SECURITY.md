@@ -27,6 +27,6 @@ Every artifact is signed. `dupex-release-key.asc` on the release page carries th
 
 ```
 gpg --import dupex-release-key.asc
-gpg --verify dupex-1.0.0-rc1-x86_64.AppImage.asc dupex-1.0.0-rc1-x86_64.AppImage
+gpg --verify dupex-<version>-x86_64.AppImage.asc dupex-<version>-x86_64.AppImage
 sha256sum -c SHA256SUMS --ignore-missing
 ```
