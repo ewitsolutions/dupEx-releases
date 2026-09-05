@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Security fixes go into the current release. Older releases are not patched — please update before reporting an issue you found on an outdated version.
+Security fixes go into the current release. Older releases are not patched — please update before reporting an issue found on an outdated version.
 
 ## Reporting a vulnerability
 
@@ -13,7 +13,7 @@ Write to **support@ewitsolutions.com** with "dupEx security" in the subject. Use
   * what an attacker could achieve, and what access they would need for it
   * the dupEx version (Menu → Info shows it) and the package format
   * the distribution and desktop environment
-  * a reproduction, if you have one
+  * a reproduction, if available
 
 Reports are read and answered by a person — there is no ticket system behind this address and no automatic reply, so a day or two of silence means nothing beyond that. Please give us time to ship a fix before making details public.
 
