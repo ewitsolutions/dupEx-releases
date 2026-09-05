@@ -32,3 +32,5 @@ sha256sum -c SHA256SUMS --ignore-missing
 ```
 
 `Good signature from "East-West IT Solutions Release Signing Key …"` is the line that matters. The warning that follows it — `WARNING: This key is not certified with a trusted signature!` — is expected and does not question the signature; it reports that the imported key carries no local trust assignment.
+
+Ownership is established by the fingerprint from `gpg --show-keys dupex-release-key.asc`, compared against the copy published at <https://ewitsolutions.com/signing-key.asc>. That copy runs on infrastructure separate from this repository, which is the point: a fingerprint and the artifact it vouches for, both hosted here, would fall together. The key can also be taken from there directly with `curl -sS https://ewitsolutions.com/signing-key.asc | gpg --import`.
