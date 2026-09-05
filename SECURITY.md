@@ -30,3 +30,5 @@ gpg --import dupex-release-key.asc
 gpg --verify dupex-<version>-x86_64.AppImage.asc dupex-<version>-x86_64.AppImage
 sha256sum -c SHA256SUMS --ignore-missing
 ```
+
+`Good signature from "East-West IT Solutions Release Signing Key …"` is the line that matters. The warning that follows it — `WARNING: This key is not certified with a trusted signature!` — is expected and does not question the signature; it reports that the imported key carries no local trust assignment.
